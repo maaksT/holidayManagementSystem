@@ -23,7 +23,7 @@ public class Vacation {
     private Double totalCost;
     private List<String> placesToSee;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "location_id")
     private Location location;
 
